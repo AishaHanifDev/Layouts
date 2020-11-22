@@ -16,31 +16,25 @@ body{
     width:100%;
     cursor:pointer;
 }
-button{
+.start{
     border-radius:4px;
     color:black;
     background-color:lightblue;
     border:none;
     font-size:15px;
     padding:5px;
-    text-align:center;
-}
-.bg img{
-  width:100%;
-}
-h1{
-  margin-left:30px;
+    position:absolute;
+    cursor:pointer;
+
 }
 .PARA{
    width:50%;
-   margin-left:40px;
-   border-left:1px solid black;
-   border-right:1px solid black;
+   border:1px solid black;
    font-size:14px;
    padding-left:8px;
 }
 .Name,.last{
-  background-color:lightblue;
+  background-color:pink;
   color:#ffffff;
   font-size:15px;
   padding-bottom:2%;
@@ -48,12 +42,18 @@ h1{
 .end{
   background-color:white;
   border-radius:4px;
+  margin-top:10px;
+  border:none;
 }
 .jumbotron{
    width:100%;
+   background-image:url("download.jpg");
+   background-position:center;
+   background-repeat:no-repeat;
    background-size:cover;
-   background:url("download.jpg");
+   height:700px;
 }
+
 /* flex Container */
  ul {
   display:flex;
@@ -62,21 +62,30 @@ h1{
   padding:5;
   font-size:12px;
 }
+.jumbotron{
+  display:inline-flex;
+  justify-content:center;
+  flex-direction:row;
+  align-content:stretch;
+  align-items:center;
+  flex-wrap:nowrap;
+}
 .wrapper{
-   display:inline-flex;
-   justify-content:center;
-   align-content:center;
+   display:flex;
    flex-direction:row;
-   border:15px solid red;
-/*   width:100%;
-*/}
+   border:10px solid red;
+   justify-content:space-between;
+}
 .Name,.last{
   display:flex;
   justify-content:center;
 }
 .Wrapper{
   display:flex;
+  justify-content:space-between;
   background-color:lightblue;
+  flex-direction:colunm;
+  width:100%;
 }
 
 
@@ -93,28 +102,29 @@ button{
   flex-direction:row;
   align-items:center;
 }
-
-h1{
-  display:inline-flex;
-}
-.PARA{
-   display:inline-flex;
-   align-self:center;
+h1,.PARA{
+  align-content:center;
+  flex:0 0 auto;
 }
 .name,.end{
   display:flex;
 }
-.Text,.Text2,.Text3{
-  display:flex;
+.Text1,.Text2,.Text3{
+  margin:auto;
+  width:32%;
 }
 .text1,.text2,.text3{
-     display:flex;
      border-radius:4px;
      background:#ffffff;
-     margin:20px;
-     padding:20px;
      color:black;
+     padding:5px;
 }
+button img{
+  order:0;
+  flex:0 1 auto;
+  align-self:auto;
+}
+
 
 
 
